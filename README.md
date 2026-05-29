@@ -84,6 +84,7 @@ user:federicogrecobarragan-prog topic:harness
 | Repo | Descripción |
 |---|---|
 | [n8n](https://github.com/federicogrecobarragan-prog/n8n) | Plataforma de automatización de workflows fair-code con IA nativa (400+ integraciones). |
+| [notify-admin-telegram](https://github.com/federicogrecobarragan-prog/notify-admin-telegram) | Notificador Telegram sin dependencias para alertas de infra/tooling (cuotas, billing, tokens, licencias). Env-driven, con severidades. |
 | [OpenWA](https://github.com/federicogrecobarragan-prog/OpenWA) | API Gateway de WhatsApp gratuito, open source y self-hosted. |
 | [wa-automate-nodejs](https://github.com/federicogrecobarragan-prog/wa-automate-nodejs) | Herramienta para chatbots de WhatsApp con features avanzadas. |
 | [wa-avd-docker](https://github.com/federicogrecobarragan-prog/wa-avd-docker) | Imagen Docker con Android virtual + WhatsApp preinstalado (VNC/noVNC). |
