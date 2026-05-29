@@ -14,8 +14,11 @@ user:federicogrecobarragan-prog topic:harness
 
 ## Proyectos propios
 
+> 🔒 = repo **privado**: el nombre es visible, pero el contenido es de acceso restringido (solo el owner).
+
 | Repo | Descripción |
 |---|---|
+| 🔒 [cda-os](https://github.com/federicogrecobarragan-prog/cda-os) | **CDA-OS** — sistema operativo multiagente enterprise (CORE) que orquesta todo el entorno: ejecutivos C-Level, agentes especializados, workflows y bitácora de proyectos/skills. |
 | [CEFALU-Sistema-de-Gestion-ERP](https://github.com/federicogrecobarragan-prog/CEFALU-Sistema-de-Gestion-ERP) | Sistema de gestión (ERP) construido desde cero con Claude Code. |
 | [CV_FedericoGrecoBarragan.github.io](https://github.com/federicogrecobarragan-prog/CV_FedericoGrecoBarragan.github.io) | Sitio de CV / portfolio personal. |
 | [Banco-Nacional-de-Cordoba-Presentacion](https://github.com/federicogrecobarragan-prog/Banco-Nacional-de-Cordoba-Presentacion) | Presentación web institucional. |
@@ -39,6 +42,8 @@ user:federicogrecobarragan-prog topic:harness
 | [Gentleman-Skills](https://github.com/federicogrecobarragan-prog/Gentleman-Skills) | Skills comunitarias para Claude Code, OpenCode y otros asistentes. |
 | [caveman](https://github.com/federicogrecobarragan-prog/caveman) | Skill que recorta ~65% de tokens "hablando como cavernícola". |
 | [gentleman-guardian-angel](https://github.com/federicogrecobarragan-prog/gentleman-guardian-angel) | Code review con IA, agnóstico de proveedor (Claude, Gemini, Codex, Ollama). |
+| 🔒 [skills-main](https://github.com/federicogrecobarragan-prog/skills-main) | Gestor del ecosistema de skills y agentes (privado). |
+| 🔒 [ejemplo-harness](https://github.com/federicogrecobarragan-prog/ejemplo-harness) | Ejemplo de referencia de harness con subagentes (privado). |
 
 ### Diseño · UI — [`topic:design`](https://github.com/search?q=user%3Afedericogrecobarragan-prog+topic%3Adesign&type=repositories)
 
@@ -48,6 +53,8 @@ user:federicogrecobarragan-prog topic:harness
 | [ui-ux-pro-max-skill](https://github.com/federicogrecobarragan-prog/ui-ux-pro-max-skill) | Skill de IA con inteligencia de diseño UI/UX multiplataforma. |
 | [PhotoGIMP](https://github.com/federicogrecobarragan-prog/PhotoGIMP) | Patch para GIMP 3+ que lo adapta a usuarios de Photoshop. |
 | [hyperframes](https://github.com/federicogrecobarragan-prog/hyperframes) | Escribís HTML, renderiza video. Pensado para agentes. |
+| 🔒 [emil-design-eng](https://github.com/federicogrecobarragan-prog/emil-design-eng) | Skill de ingeniería de diseño / componentes UI front (privado). |
+| 🔒 [open-codesign](https://github.com/federicogrecobarragan-prog/open-codesign) | Agente de diseño local, open codesign (privado). |
 
 ### Marketing · SEO — [`topic:marketing`](https://github.com/search?q=user%3Afedericogrecobarragan-prog+topic%3Amarketing&type=repositories)
 
@@ -56,6 +63,7 @@ user:federicogrecobarragan-prog topic:harness
 | [claude-seo](https://github.com/federicogrecobarragan-prog/claude-seo) | Skill universal de SEO para Claude Code: 25 sub-skills + 18 sub-agentes. |
 | [serpapi-claude-plugin](https://github.com/federicogrecobarragan-prog/serpapi-claude-plugin) | Plugin de Claude para la API de SerpApi. |
 | [serpapi-cursor-plugin](https://github.com/federicogrecobarragan-prog/serpapi-cursor-plugin) | Plugin de Cursor para la API de SerpApi. |
+| 🔒 [ai-marketing-claude](https://github.com/federicogrecobarragan-prog/ai-marketing-claude) | Agencia de marketing con IA para Claude (privado). |
 
 ### Scraping · Extracción web — [`topic:scraping`](https://github.com/search?q=user%3Afedericogrecobarragan-prog+topic%3Ascraping&type=repositories)
 
