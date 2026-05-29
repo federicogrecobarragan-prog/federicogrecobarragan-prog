@@ -19,6 +19,7 @@ user:federicogrecobarragan-prog topic:harness
 | Repo | Descripción |
 |---|---|
 | 🔒 [cda-os](https://github.com/federicogrecobarragan-prog/cda-os) | **CDA-OS** — sistema operativo multiagente enterprise (CORE) que orquesta todo el entorno: ejecutivos C-Level, agentes especializados, workflows y bitácora de proyectos/skills. |
+| 🔒 [alimentando-a-popa](https://github.com/federicogrecobarragan-prog/alimentando-a-popa) | App móvil de dieta personalizada (React Native + Expo, Supabase, RevenueCat). |
 | [CEFALU-Sistema-de-Gestion-ERP](https://github.com/federicogrecobarragan-prog/CEFALU-Sistema-de-Gestion-ERP) | Sistema de gestión (ERP) construido desde cero con Claude Code. |
 | [CV_FedericoGrecoBarragan.github.io](https://github.com/federicogrecobarragan-prog/CV_FedericoGrecoBarragan.github.io) | Sitio de CV / portfolio personal. |
 | [Banco-Nacional-de-Cordoba-Presentacion](https://github.com/federicogrecobarragan-prog/Banco-Nacional-de-Cordoba-Presentacion) | Presentación web institucional. |
