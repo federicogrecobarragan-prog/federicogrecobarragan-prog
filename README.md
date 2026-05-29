@@ -44,6 +44,7 @@ user:federicogrecobarragan-prog topic:harness
 | [Gentleman-Skills](https://github.com/federicogrecobarragan-prog/Gentleman-Skills) | Skills comunitarias para Claude Code, OpenCode y otros asistentes. |
 | [caveman](https://github.com/federicogrecobarragan-prog/caveman) | Skill que recorta ~65% de tokens "hablando como cavernícola". |
 | [claude-code-safety-hooks](https://github.com/federicogrecobarragan-prog/claude-code-safety-hooks) | Hooks PreToolUse config-driven: backup de archivos críticos, bloqueo de JSON malformado, aviso en archivos de alto impacto. Sin dependencias. |
+| 🔒 [openclaw-safe-update](https://github.com/federicogrecobarragan-prog/openclaw-safe-update) | Updater seguro del binario OpenClaw: backup + age gate supply-chain + reinstala plugins críticos + verifica canales. Privado. |
 | [gentleman-guardian-angel](https://github.com/federicogrecobarragan-prog/gentleman-guardian-angel) | Code review con IA, agnóstico de proveedor (Claude, Gemini, Codex, Ollama). |
 | 🔒 [skills-main](https://github.com/federicogrecobarragan-prog/skills-main) | Gestor del ecosistema de skills y agentes (privado). |
 | 🔒 [ejemplo-harness](https://github.com/federicogrecobarragan-prog/ejemplo-harness) | Ejemplo de referencia de harness con subagentes (privado). |
