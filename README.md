@@ -19,6 +19,7 @@ user:federicogrecobarragan-prog topic:harness
 | Repo | Descripción |
 |---|---|
 | 🔒 [cda-os](https://github.com/federicogrecobarragan-prog/cda-os) | **CDA-OS** — sistema operativo multiagente enterprise (CORE) que orquesta todo el entorno: ejecutivos C-Level, agentes especializados, workflows y bitácora de proyectos/skills. |
+| 🔒 [la-colmena](https://github.com/federicogrecobarragan-prog/la-colmena) | **La Colmena** — ecosistema multiagente en producción sobre OpenClaw (12 agentes, Supabase fuente de verdad, scheduler cron, 8 pilares del harness). Export scrubbeado scripts+docs+harness. |
 | 🔒 [cda-casos-exito](https://github.com/federicogrecobarragan-prog/cda-casos-exito) | **Armador de Casos de Éxito** — visor web Azure + harness anti-alucinación para portfolio comercial KAM. Sistema activo con 136 antecedentes + 27 casos curados (datos locales, privados). |
 | 🔒 [agencia-autonoma](https://github.com/federicogrecobarragan-prog/agencia-autonoma) | **Agencia Autónoma** — sistema personal para diseñar, crear y vender productos digitales (Printables, Ebooks, Templates, SVG, Presets, Prompt Packs) en Etsy, Gumroad y web directa. Outreach + SEO + tracker de ingresos. Objetivo ≥ 1.000 USD/mes. |
 | 🔒 [alimentando-a-popa](https://github.com/federicogrecobarragan-prog/alimentando-a-popa) | App móvil de dieta personalizada (React Native + Expo, Supabase, RevenueCat). |
