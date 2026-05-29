@@ -73,6 +73,7 @@ user:federicogrecobarragan-prog topic:harness
 | Repo | Descripción |
 |---|---|
 | [Scrapling](https://github.com/federicogrecobarragan-prog/Scrapling) | Framework de web scraping adaptativo, de un request a un crawl completo. |
+| 🔒 [linkedin-orgchart](https://github.com/federicogrecobarragan-prog/linkedin-orgchart) | Scrapea personas senior de una empresa en LinkedIn y genera organigrama jerárquico (.drawio). Playwright stealth + layout por área. Privado. |
 | [firecrawl](https://github.com/federicogrecobarragan-prog/firecrawl) | Buscá, scrapeá y limpiá la web para agentes de IA. |
 | [goclone](https://github.com/federicogrecobarragan-prog/goclone) | Clonador de sitios web con goroutines de Go (clona en segundos). |
 | [Website-Cloner](https://github.com/federicogrecobarragan-prog/Website-Cloner) | Descarga recursiva de un sitio (HTML, imágenes, archivos) a local. |
