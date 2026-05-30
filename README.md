@@ -46,6 +46,7 @@ user:federicogrecobarragan-prog topic:harness
 | [learn-harness-engineering](https://github.com/federicogrecobarragan-prog/learn-harness-engineering) | Tutorial de harness engineering de 0 a 1. |
 | [harness-engineering-guide](https://github.com/federicogrecobarragan-prog/harness-engineering-guide) | Guía abierta de harness engineering: conceptos, tutoriales, papers, herramientas. |
 | [awesome-claude-code](https://github.com/federicogrecobarragan-prog/awesome-claude-code) | Lista curada de skills, hooks, slash-commands y plugins para Claude Code. |
+| [awesome-agent-skills](https://github.com/federicogrecobarragan-prog/awesome-agent-skills) | Fork de VoltAgent: 1424+ agent skills curadas de equipos oficiales (Anthropic, Google, Vercel, Stripe, Cloudflare, Supabase, Figma, OpenAI…) + comunidad. Claude Code/Codex/Gemini CLI/Cursor. |
 | [Gentleman-Skills](https://github.com/federicogrecobarragan-prog/Gentleman-Skills) | Skills comunitarias para Claude Code, OpenCode y otros asistentes. |
 | [caveman](https://github.com/federicogrecobarragan-prog/caveman) | Skill que recorta ~65% de tokens "hablando como cavernícola". |
 | [claude-code-safety-hooks](https://github.com/federicogrecobarragan-prog/claude-code-safety-hooks) | Hooks PreToolUse config-driven: backup de archivos críticos, bloqueo de JSON malformado, aviso en archivos de alto impacto. Sin dependencias. |
