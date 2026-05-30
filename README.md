@@ -60,6 +60,7 @@ user:federicogrecobarragan-prog topic:harness
 | Repo | Descripción |
 |---|---|
 | [open-design](https://github.com/federicogrecobarragan-prog/open-design) | Alternativa local y open-source a Claude Design: 19 skills, 71 design systems, export HTML/PDF/PPTX/MP4. |
+| [claude-creative-work](https://github.com/federicogrecobarragan-prog/claude-creative-work) | Guía de Claude for Creative Work (9 conectores Adobe/Affinity/Blender…, 3 demos, 6 workflows, plan 5 días) + prompt master de batch processing de fotos. |
 | [ui-ux-pro-max-skill](https://github.com/federicogrecobarragan-prog/ui-ux-pro-max-skill) | Skill de IA con inteligencia de diseño UI/UX multiplataforma. |
 | [PhotoGIMP](https://github.com/federicogrecobarragan-prog/PhotoGIMP) | Patch para GIMP 3+ que lo adapta a usuarios de Photoshop. |
 | [hyperframes](https://github.com/federicogrecobarragan-prog/hyperframes) | Escribís HTML, renderiza video. Pensado para agentes. |
