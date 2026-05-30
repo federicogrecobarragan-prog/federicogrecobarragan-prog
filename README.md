@@ -87,6 +87,9 @@ user:federicogrecobarragan-prog topic:harness
 | [Website-Cloner](https://github.com/federicogrecobarragan-prog/Website-Cloner) | Descarga recursiva de un sitio (HTML, imágenes, archivos) a local. |
 | [ai-website-cloner-template](https://github.com/federicogrecobarragan-prog/ai-website-cloner-template) | Cloná cualquier sitio con un comando usando agentes de IA. |
 | [Webwright](https://github.com/federicogrecobarragan-prog/Webwright) | Framework de agente-navegador para tareas web de horizonte largo. |
+| [obsidian-clipper](https://github.com/federicogrecobarragan-prog/obsidian-clipper) | Fork oficial: Web Clipper de Obsidian — captura/resalta páginas web → Markdown durable (templates, variables, filtros). Chrome/Firefox/Safari/Edge. |
+| [obsidian-api](https://github.com/federicogrecobarragan-prog/obsidian-api) | Fork oficial: type definitions TS de la API de Obsidian para desarrollar plugins. |
+| [obsidian-releases](https://github.com/federicogrecobarragan-prog/obsidian-releases) | Fork oficial: catálogo de community plugins + themes + releases de Obsidian. |
 
 ### Automatización · WhatsApp — [`topic:automation`](https://github.com/search?q=user%3Afedericogrecobarragan-prog+topic%3Aautomation&type=repositories)
 
