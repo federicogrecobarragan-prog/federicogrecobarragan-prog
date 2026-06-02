@@ -69,6 +69,7 @@ user:federicogrecobarragan-prog topic:harness
 | [ui-ux-pro-max-skill](https://github.com/federicogrecobarragan-prog/ui-ux-pro-max-skill) | Skill de IA con inteligencia de diseño UI/UX multiplataforma. |
 | [PhotoGIMP](https://github.com/federicogrecobarragan-prog/PhotoGIMP) | Patch para GIMP 3+ que lo adapta a usuarios de Photoshop. |
 | [hyperframes](https://github.com/federicogrecobarragan-prog/hyperframes) | Escribís HTML, renderiza video. Pensado para agentes. |
+| [Fooocus](https://github.com/federicogrecobarragan-prog/Fooocus) | Generador de imágenes IA (Stable Diffusion) enfocado en prompting. Uso en La Colmena (evaluación/condicional, requiere GPU): creativos para posts de Tokio, ads de funnels y contenido Vinoteca. |
 | 🔒 [emil-design-eng](https://github.com/federicogrecobarragan-prog/emil-design-eng) | Skill de ingeniería de diseño / componentes UI front (privado). |
 | 🔒 [open-codesign](https://github.com/federicogrecobarragan-prog/open-codesign) | Agente de diseño local, open codesign (privado). |
 
@@ -94,6 +95,7 @@ user:federicogrecobarragan-prog topic:harness
 | [Website-Cloner](https://github.com/federicogrecobarragan-prog/Website-Cloner) | Descarga recursiva de un sitio (HTML, imágenes, archivos) a local. |
 | [ai-website-cloner-template](https://github.com/federicogrecobarragan-prog/ai-website-cloner-template) | Cloná cualquier sitio con un comando usando agentes de IA. |
 | [Webwright](https://github.com/federicogrecobarragan-prog/Webwright) | Framework de agente-navegador para tareas web de horizonte largo. |
+| [yt-dlp](https://github.com/federicogrecobarragan-prog/yt-dlp) | Descargador CLI de audio/video con mil opciones. Uso en La Colmena: ingesta de media → Whisper (transcripción), captura de contenido para Mora/análisis y assets Vinoteca/IG. |
 | [obsidian-clipper](https://github.com/federicogrecobarragan-prog/obsidian-clipper) | Fork oficial: Web Clipper de Obsidian — captura/resalta páginas web → Markdown durable (templates, variables, filtros). Chrome/Firefox/Safari/Edge. |
 | [obsidian-api](https://github.com/federicogrecobarragan-prog/obsidian-api) | Fork oficial: type definitions TS de la API de Obsidian para desarrollar plugins. |
 | [obsidian-releases](https://github.com/federicogrecobarragan-prog/obsidian-releases) | Fork oficial: catálogo de community plugins + themes + releases de Obsidian. |
@@ -107,6 +109,7 @@ user:federicogrecobarragan-prog topic:harness
 | [OpenWA](https://github.com/federicogrecobarragan-prog/OpenWA) | API Gateway de WhatsApp gratuito, open source y self-hosted. |
 | [wa-automate-nodejs](https://github.com/federicogrecobarragan-prog/wa-automate-nodejs) | Herramienta para chatbots de WhatsApp con features avanzadas. |
 | [wa-avd-docker](https://github.com/federicogrecobarragan-prog/wa-avd-docker) | Imagen Docker con Android virtual + WhatsApp preinstalado (VNC/noVNC). |
+| [cal.diy](https://github.com/federicogrecobarragan-prog/cal.diy) | **Cal.com** — infraestructura de agendamiento self-hosted (alternativa a Calendly). Uso en La Colmena: funnel AgendaBot, booking KAM/Aria, widget de agenda embebido en oficinadejhonson.com. |
 
 ### MCP · Testing — [`topic:mcp`](https://github.com/search?q=user%3Afedericogrecobarragan-prog+topic%3Amcp&type=repositories)
 
@@ -123,6 +126,7 @@ user:federicogrecobarragan-prog topic:harness
 | [engram](https://github.com/federicogrecobarragan-prog/engram) | Memoria persistente para agentes de codificación (Go + SQLite/FTS5, MCP, CLI, TUI). |
 | [turbovec](https://github.com/federicogrecobarragan-prog/turbovec) | Índice vectorial sobre TurboQuant (Rust con bindings de Python). |
 | [gentle-ai](https://github.com/federicogrecobarragan-prog/gentle-ai) | Utilidades de IA en Go. |
+| [whisper](https://github.com/federicogrecobarragan-prog/whisper) | Speech-to-text robusto de OpenAI (transcripción/traducción). Uso en La Colmena: Aria transcribe reuniones Meet/Zoom y llamadas de venta → log a CRM/Supabase. |
 
 ### Otros — Seguridad · Fintech · ML · Self-hosting
 
@@ -134,3 +138,4 @@ user:federicogrecobarragan-prog topic:harness
 | [nn-zero-to-hero](https://github.com/federicogrecobarragan-prog/nn-zero-to-hero) | [`ml`](https://github.com/search?q=user%3Afedericogrecobarragan-prog+topic%3Aml&type=repositories) | Redes neuronales: de cero a héroe (curso). |
 | [vw_web_builds](https://github.com/federicogrecobarragan-prog/vw_web_builds) | [`self-hosting`](https://github.com/search?q=user%3Afedericogrecobarragan-prog+topic%3Aself-hosting&type=repositories) | Fork de Bitwarden para compilar solo el web-vault de Vaultwarden. |
 | 🔒 [infra-deploy](https://github.com/federicogrecobarragan-prog/infra-deploy) | [`self-hosting`](https://github.com/search?q=user%3Afedericogrecobarragan-prog+topic%3Aself-hosting&type=repositories) | Configs de deploy scrubbeadas (solo compose) de infra self-hosted de La Colmena: Vaultwarden (LA BÓVEDA) + Traefik. Secretos vía `.env` no versionado. |
+| [analytics](https://github.com/federicogrecobarragan-prog/analytics) | [`self-hosting`](https://github.com/search?q=user%3Afedericogrecobarragan-prog+topic%3Aself-hosting&type=repositories) | **Plausible** — analytics web self-hosted, privacy-first, sin cookies (alternativa a GA). Uso en La Colmena: medición de oficinadejhonson.com + conversión de funnels (AgendaBot/FacturaBot/ReseñaBot) y landings. |
