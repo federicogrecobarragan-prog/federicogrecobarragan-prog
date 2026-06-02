@@ -20,6 +20,7 @@ user:federicogrecobarragan-prog topic:harness
 |---|---|
 | 🔒 [cda-os](https://github.com/federicogrecobarragan-prog/cda-os) | **CDA-OS** — sistema operativo multiagente enterprise (CORE) que orquesta todo el entorno: ejecutivos C-Level, agentes especializados, workflows y bitácora de proyectos/skills. |
 | 🔒 [la-colmena](https://github.com/federicogrecobarragan-prog/la-colmena) | **La Colmena** — ecosistema multiagente en producción sobre OpenClaw (12 agentes, Supabase fuente de verdad, scheduler cron, 8 pilares del harness). Export scrubbeado scripts+docs+harness. |
+| 🔒 [aria-agent](https://github.com/federicogrecobarragan-prog/aria-agent) | **Aria** — agente IA conversacional encarnado (avatar + voz + presencia en Meet/Zoom + RAG) para acompañar a Federico (KAM en CDA) en reuniones comerciales. Self-hosted: cerebro + base de conocimiento en infraestructura propia (VPS + Supabase). Parte del ecosistema La Colmena. |
 | 🔒 [colmena-digital](https://github.com/federicogrecobarragan-prog/colmena-digital) | **La Colmena Digital / OFICINA DE JHONSON** — consultora de automatización IA: web pública, ChatJhonson (widget agéntico), funnels WhatsApp, pipeline outbound. Export scrubbeado (sin material de clientes). |
 | 🔒 [cda-casos-exito](https://github.com/federicogrecobarragan-prog/cda-casos-exito) | **Armador de Casos de Éxito** — visor web Azure + harness anti-alucinación para portfolio comercial KAM. Sistema activo con 136 antecedentes + 27 casos curados (datos locales, privados). |
 | 🔒 [agencia-autonoma](https://github.com/federicogrecobarragan-prog/agencia-autonoma) | **Agencia Autónoma** — sistema personal para diseñar, crear y vender productos digitales (Printables, Ebooks, Templates, SVG, Presets, Prompt Packs) en Etsy, Gumroad y web directa. Outreach + SEO + tracker de ingresos. Objetivo ≥ 1.000 USD/mes. |
@@ -85,6 +86,7 @@ user:federicogrecobarragan-prog topic:harness
 | Repo | Descripción |
 |---|---|
 | [Scrapling](https://github.com/federicogrecobarragan-prog/Scrapling) | Framework de web scraping adaptativo, de un request a un crawl completo. |
+| [Scrapegraph-ai](https://github.com/federicogrecobarragan-prog/Scrapegraph-ai) | Scraper en Python basado en IA: extracción de datos web mediante grafos y LLMs. |
 | 🔒 [linkedin-orgchart](https://github.com/federicogrecobarragan-prog/linkedin-orgchart) | Scrapea personas senior de una empresa en LinkedIn y genera organigrama jerárquico (.drawio). Playwright stealth + layout por área. Privado. |
 | 🔒 [scraping-dashboard](https://github.com/federicogrecobarragan-prog/scraping-dashboard) | Consola web privada (Flask) para ver resultados de scraping/intel de La Colmena: noticias, leads, organigramas, leads de ChatJhonson. SPA + API JSON proxy a Supabase server-side, nginx Basic Auth. |
 | [firecrawl](https://github.com/federicogrecobarragan-prog/firecrawl) | Buscá, scrapeá y limpiá la web para agentes de IA. |
