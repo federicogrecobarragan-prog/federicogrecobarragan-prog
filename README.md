@@ -124,6 +124,7 @@ user:federicogrecobarragan-prog topic:harness
 
 | Repo | Descripción |
 |---|---|
+| 🔒 [llm-local-router](https://github.com/federicogrecobarragan-prog/llm-local-router) | **Router LLM local-first** (zero deps): intenta un modelo local (Ollama, OpenAI-compatible) y cae a un proveedor cloud (OpenRouter) ante OFF/timeout/output inválido. Probe fail-fast + patrón validate-or-fallback + ledger de ahorro. Pensado para offloadear tareas simples (clasificar/resumir) y ahorrar tokens. Usado en La Colmena (VPS ↔ Ollama de desktop vía Tailscale). |
 | [engram](https://github.com/federicogrecobarragan-prog/engram) | Memoria persistente para agentes de codificación (Go + SQLite/FTS5, MCP, CLI, TUI). |
 | [turbovec](https://github.com/federicogrecobarragan-prog/turbovec) | Índice vectorial sobre TurboQuant (Rust con bindings de Python). |
 | [gentle-ai](https://github.com/federicogrecobarragan-prog/gentle-ai) | Utilidades de IA en Go. |
