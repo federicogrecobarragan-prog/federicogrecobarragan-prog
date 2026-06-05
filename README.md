@@ -12,6 +12,27 @@ user:federicogrecobarragan-prog topic:harness
 
 ---
 
+## 🚀 ¿Arrancás un proyecto nuevo? — Matriz de capacidades
+
+> **Este README es el REPOSITORIO MADRE.** Antes de empezar cualquier proyecto, mirá acá qué tenés ya disponible para potenciarlo. Buscá el tipo de proyecto y combiná las piezas. Casi todo es reutilizable entre dominios.
+
+| Si el proyecto es de… | Qué tenés para potenciarlo | Repos clave |
+|---|---|---|
+| **Ventas · Outreach · Captación** | Mapear decisores de una cuenta, sourcing de leads, secuencias de outbench (LinkedIn/email/social), CRM y casos de éxito para cerrar. | `linkedin-orgchart`, `recluta-os`, `OpenOutreach`, `growchief`, `crm-colmena`, `cda-casos-exito`, `n8n` + `n8n-nodes-instantly`, `oficina-de-jhonson-agencia` |
+| **Diseño · UI · Branding** | Generar UIs/landings premium, design systems, componentes, creativos con IA, video desde HTML, edición de imagen. | `open-design`, `open-codesign`, `emil-design-eng`, `ui-ux-pro-max-skill`, `claude-creative-work`, `hyperframes`, `Fooocus`, `PhotoGIMP` |
+| **Programación · Harness · Agentes** | Spec-driven dev, orquestación de sub-agentes, meta-prompting, skills, safety hooks, code review, memoria. | `gstack`, `cc-sdd`, `get-shit-done`, `agent-teams-lite`, `open-agents`, `hermes-agent`, `caveman`, `claude-code-safety-hooks`, `gentleman-guardian-angel`, `pskoett-ai-skills`, `awesome-claude-code`, `awesome-agent-skills` |
+| **Web · Landing · Sitios** | Plantillas propias de referencia, clonar referencias, SEO, analytics privacy-first, agenda embebida. | `oficinadejhonson-web`, `Syncro-WEB`, `open-design`, `goclone` / `Website-Cloner` / `ai-website-cloner-template`, `claude-seo`, `analytics`, `cal.diy` |
+| **Marketing · SEO · Contenido** | Auditoría/generación SEO, intel de búsqueda (SerpApi), agencia de marketing IA, funnels, creativos, distribución. | `claude-seo`, `serpapi-claude-plugin` / `serpapi-cursor-plugin`, `ai-marketing-claude`, `colmena-digital`, `Fooocus`, `n8n` |
+| **Scraping · Datos · Intel** | Scraping adaptativo, scraping por LLM, crawling, organigramas LinkedIn, media→texto, consola de resultados. | `Scrapling`, `Scrapegraph-ai`, `firecrawl`, `linkedin-orgchart`, `scraping-dashboard`, `Webwright`, `yt-dlp` + `whisper`, `obsidian-clipper` |
+| **Automatización · Mensajería** | Motor de workflows, nodos a medida, WhatsApp self-hosted, agendamiento, alertas a Telegram. | `n8n`, `n8n-nodes-instantly`, `OpenWA`, `wa-automate-nodejs`, `wa-avd-docker`, `cal.diy`, `notify-admin-telegram`, `growchief` |
+| **Infra IA · Memoria · Modelos** | Router local-first (ahorro de tokens), memoria persistente, índice vectorial, transcripción, workspace IA, MCP. | `llm-local-router`, `engram`, `turbovec`, `whisper`, `gentle-ai`, `odysseus`, `AppFlowy-Cloud`, `inspector`, `mcp-for-beginners`, `playwright` |
+| **Seguridad · Supply-chain** | Escaneo de vulnerabilidades, auditoría de paquetes npm pre-install, hooks de seguridad, deploy hardened. | `nuclei`, `npq`, `npm-security-best-practices`, `claude-code-safety-hooks`, `openclaw-safe-update`, `infra-deploy`, `vw_web_builds` |
+| **Fintech · Pagos** | Integración de pagos generada, agente autónomo que cobra. | `agente-pagokit`, `cashclaw` |
+
+> **Proyectos combinados:** la mayoría de los proyectos reales mezclan dominios. Ej.: una **web de captación** = `open-design` (diseño) + `claude-seo` (marketing) + `cal.diy` (agenda) + `analytics` (medición) + `linkedin-orgchart`/`OpenOutreach` (outreach del lead). El **harness** (`gstack`/`cc-sdd`/`caveman`/safety-hooks) aplica como capa transversal a cualquier proyecto de código.
+
+---
+
 ## Proyectos propios
 
 > 🔒 = repo **privado**: el nombre es visible, pero el contenido es de acceso restringido (solo el owner).
@@ -21,6 +42,7 @@ user:federicogrecobarragan-prog topic:harness
 | 🔒 [cda-os](https://github.com/federicogrecobarragan-prog/cda-os) | **CDA-OS** — sistema operativo multiagente enterprise (CORE) que orquesta todo el entorno: ejecutivos C-Level, agentes especializados, workflows y bitácora de proyectos/skills. |
 | 🔒 [la-colmena](https://github.com/federicogrecobarragan-prog/la-colmena) | **La Colmena** — ecosistema multiagente en producción sobre OpenClaw (12 agentes, Supabase fuente de verdad, scheduler cron, 8 pilares del harness). Export scrubbeado scripts+docs+harness. |
 | 🔒 [aria-agent](https://github.com/federicogrecobarragan-prog/aria-agent) | **Aria** — agente IA conversacional encarnado (avatar + voz + presencia en Meet/Zoom + RAG) para acompañar a Federico (KAM en CDA) en reuniones comerciales. Self-hosted: cerebro + base de conocimiento en infraestructura propia (VPS + Supabase). Parte del ecosistema La Colmena. |
+| 🔒 [oficina-de-jhonson-agencia](https://github.com/federicogrecobarragan-prog/oficina-de-jhonson-agencia) | **Agencia Autónoma OFICINA DE JHONSON** — repo paraguas de monetización: motor de captación (outreach a locales vía Places API), motor de contenido/SEO, propuestas y tracker. Specs SDD por frente. Distinto de `agencia-autonoma` (productos digitales personales). |
 | 🔒 [colmena-digital](https://github.com/federicogrecobarragan-prog/colmena-digital) | **La Colmena Digital / OFICINA DE JHONSON** — consultora de automatización IA: web pública, ChatJhonson (widget agéntico), funnels WhatsApp, pipeline outbound. Export scrubbeado (sin material de clientes). |
 | 🔒 [cda-casos-exito](https://github.com/federicogrecobarragan-prog/cda-casos-exito) | **Armador de Casos de Éxito** — visor web Azure + harness anti-alucinación para portfolio comercial KAM. Sistema activo con 136 antecedentes + 27 casos curados (datos locales, privados). |
 | 🔒 [agencia-autonoma](https://github.com/federicogrecobarragan-prog/agencia-autonoma) | **Agencia Autónoma** — sistema personal para diseñar, crear y vender productos digitales (Printables, Ebooks, Templates, SVG, Presets, Prompt Packs) en Etsy, Gumroad y web directa. Outreach + SEO + tracker de ingresos. Objetivo ≥ 1.000 USD/mes. |
@@ -47,6 +69,7 @@ user:federicogrecobarragan-prog topic:harness
 | [cc-sdd](https://github.com/federicogrecobarragan-prog/cc-sdd) | Harness mínimo de Spec-Driven Development para Claude Code, Codex, Cursor y más. |
 | [get-shit-done](https://github.com/federicogrecobarragan-prog/get-shit-done) | Sistema de meta-prompting y context engineering para Claude Code. |
 | [agent-teams-lite](https://github.com/federicogrecobarragan-prog/agent-teams-lite) | Orquestador + 9 sub-agentes para desarrollo dirigido por specs. Sin dependencias. |
+| [hermes-agent](https://github.com/federicogrecobarragan-prog/hermes-agent) | Agente de NousResearch "que crece con vos": framework de agente con memoria/aprendizaje continuo. Referencia para agentes long-running. |
 | [open-agents](https://github.com/federicogrecobarragan-prog/open-agents) | Template open source para construir agentes en la nube. |
 | [learn-harness-engineering](https://github.com/federicogrecobarragan-prog/learn-harness-engineering) | Tutorial de harness engineering de 0 a 1. |
 | [harness-engineering-guide](https://github.com/federicogrecobarragan-prog/harness-engineering-guide) | Guía abierta de harness engineering: conceptos, tutoriales, papers, herramientas. |
@@ -101,12 +124,15 @@ user:federicogrecobarragan-prog topic:harness
 | [obsidian-api](https://github.com/federicogrecobarragan-prog/obsidian-api) | Fork oficial: type definitions TS de la API de Obsidian para desarrollar plugins. |
 | [obsidian-releases](https://github.com/federicogrecobarragan-prog/obsidian-releases) | Fork oficial: catálogo de community plugins + themes + releases de Obsidian. |
 
-### Automatización · WhatsApp — [`topic:automation`](https://github.com/search?q=user%3Afedericogrecobarragan-prog+topic%3Aautomation&type=repositories)
+### Automatización · WhatsApp · Outreach — [`topic:automation`](https://github.com/search?q=user%3Afedericogrecobarragan-prog+topic%3Aautomation&type=repositories)
 
 | Repo | Descripción |
 |---|---|
 | [n8n](https://github.com/federicogrecobarragan-prog/n8n) | Plataforma de automatización de workflows fair-code con IA nativa (400+ integraciones). |
+| [n8n-nodes-instantly](https://github.com/federicogrecobarragan-prog/n8n-nodes-instantly) | Nodo community de n8n para integrar la API de Instantly (email outbound en frío). Directo para los funnels outbound de La Colmena Digital. |
 | [notify-admin-telegram](https://github.com/federicogrecobarragan-prog/notify-admin-telegram) | Notificador Telegram sin dependencias para alertas de infra/tooling (cuotas, billing, tokens, licencias). Env-driven, con severidades. |
+| [OpenOutreach](https://github.com/federicogrecobarragan-prog/OpenOutreach) | Herramienta de outreach LinkedIn con IA: describís producto + mercado objetivo y el motor encuentra los leads. Referencia/alternativa para el pipeline HUNTER. |
+| [growchief](https://github.com/federicogrecobarragan-prog/growchief) | Tool all-in-one de automatización de outreach en redes sociales. Candidato para escalar el outreach multicanal. |
 | [OpenWA](https://github.com/federicogrecobarragan-prog/OpenWA) | API Gateway de WhatsApp gratuito, open source y self-hosted. |
 | [wa-automate-nodejs](https://github.com/federicogrecobarragan-prog/wa-automate-nodejs) | Herramienta para chatbots de WhatsApp con features avanzadas. |
 | [wa-avd-docker](https://github.com/federicogrecobarragan-prog/wa-avd-docker) | Imagen Docker con Android virtual + WhatsApp preinstalado (VNC/noVNC). |
@@ -127,7 +153,9 @@ user:federicogrecobarragan-prog topic:harness
 | 🔒 [llm-local-router](https://github.com/federicogrecobarragan-prog/llm-local-router) | **Router LLM local-first** (zero deps): intenta un modelo local (Ollama, OpenAI-compatible) y cae a un proveedor cloud (OpenRouter) ante OFF/timeout/output inválido. Probe fail-fast + patrón validate-or-fallback + ledger de ahorro. Pensado para offloadear tareas simples (clasificar/resumir) y ahorrar tokens. Usado en La Colmena (VPS ↔ Ollama de desktop vía Tailscale). |
 | [engram](https://github.com/federicogrecobarragan-prog/engram) | Memoria persistente para agentes de codificación (Go + SQLite/FTS5, MCP, CLI, TUI). |
 | [turbovec](https://github.com/federicogrecobarragan-prog/turbovec) | Índice vectorial sobre TurboQuant (Rust con bindings de Python). |
-| [gentle-ai](https://github.com/federicogrecobarragan-prog/gentle-ai) | Utilidades de IA en Go. |
+| [odysseus](https://github.com/federicogrecobarragan-prog/odysseus) | Workspace de IA self-hosted (todo-en-uno). Candidato a evaluar como cockpit local de agentes. |
+| [AppFlowy-Cloud](https://github.com/federicogrecobarragan-prog/AppFlowy-Cloud) | Backend de AppFlowy — workspace colaborativo con IA (alternativa open-source a Notion). Proyectos, wikis y equipos con tus datos bajo control. |
+| [gentle-ai](https://github.com/federicogrecobarragan-prog/gentle-ai) | Utilidades de IA en Go: building blocks ligeros para agentes/servicios IA. |
 | [whisper](https://github.com/federicogrecobarragan-prog/whisper) | Speech-to-text robusto de OpenAI (transcripción/traducción). Uso en La Colmena: Aria transcribe reuniones Meet/Zoom y llamadas de venta → log a CRM/Supabase. |
 
 ### Otros — Seguridad · Fintech · ML · Self-hosting
@@ -135,6 +163,8 @@ user:federicogrecobarragan-prog topic:harness
 | Repo | Categoría | Descripción |
 |---|---|---|
 | [nuclei](https://github.com/federicogrecobarragan-prog/nuclei) | [`security`](https://github.com/search?q=user%3Afedericogrecobarragan-prog+topic%3Asecurity&type=repositories) | Escáner de vulnerabilidades rápido y customizable (DSL en YAML). |
+| [npq](https://github.com/federicogrecobarragan-prog/npq) | [`security`](https://github.com/search?q=user%3Afedericogrecobarragan-prog+topic%3Asecurity&type=repositories) | Instala paquetes npm de forma segura auditándolos en etapa pre-install. Capa supply-chain. |
+| [npm-security-best-practices](https://github.com/federicogrecobarragan-prog/npm-security-best-practices) | [`security`](https://github.com/search?q=user%3Afedericogrecobarragan-prog+topic%3Asecurity&type=repositories) | Colección de buenas prácticas de seguridad para el package manager npm. |
 | [agente-pagokit](https://github.com/federicogrecobarragan-prog/agente-pagokit) | [`fintech`](https://github.com/search?q=user%3Afedericogrecobarragan-prog+topic%3Afintech&type=repositories) | Plugin de Claude Code que genera integración de pagos completa (Stripe, Mercado Pago, Wompi, Lemon Squeezy). |
 | [cashclaw](https://github.com/federicogrecobarragan-prog/cashclaw) | [`fintech`](https://github.com/search?q=user%3Afedericogrecobarragan-prog+topic%3Afintech&type=repositories) | Agente autónomo que toma trabajo, lo hace, cobra y mejora. |
 | [nn-zero-to-hero](https://github.com/federicogrecobarragan-prog/nn-zero-to-hero) | [`ml`](https://github.com/search?q=user%3Afedericogrecobarragan-prog+topic%3Aml&type=repositories) | Redes neuronales: de cero a héroe (curso). |
