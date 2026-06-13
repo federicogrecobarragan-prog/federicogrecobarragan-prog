@@ -40,6 +40,7 @@ user:federicogrecobarragan-prog topic:harness
 
 | Repo | Descripción |
 |---|---|
+| 🔒 [colmena-kit](https://github.com/federicogrecobarragan-prog/colmena-kit) | Colmena Kit — equipo de agentes IA gestionado para PyMEs (productización de La Colmena) |
 | 🔒 [cda-os](https://github.com/federicogrecobarragan-prog/cda-os) | **CDA-OS** — sistema operativo multiagente enterprise (CORE) que orquesta todo el entorno: ejecutivos C-Level, agentes especializados, workflows y bitácora de proyectos/skills. |
 | 🔒 [la-colmena](https://github.com/federicogrecobarragan-prog/la-colmena) | **La Colmena** — ecosistema multiagente en producción sobre OpenClaw (12 agentes, Supabase fuente de verdad, scheduler cron, 8 pilares del harness). Incluye **COMMAND CENTER** (cockpit.oficinadejhonson.com — panel único del ecosistema, `cockpit/` + collector) y motor VibeMarketing (leadgen Places 2 segmentos/día + Instantly). Export scrubbeado scripts+docs+harness. |
 | 🔒 [colmena-vault](https://github.com/federicogrecobarragan-prog/colmena-vault) | **COLMENA VAULT** — knowledge graph del ecosistema La Colmena generado por Graphify (tree-sitter AST + Ollama local, $0): vault Obsidian (1 nota por nodo + wikilinks), wiki por módulo y GRAPH_REPORT. Auto-sync diario desde la VPS con secret-scan pre-push. Fuente de verdad del MAPA (Supabase sigue siendo la de datos). |
