@@ -1,7 +1,0 @@
-docs: agregar skill montar-web (framework build+deploy de webs)
-
-Skill end-to-end destilado de las webs del ecosistema (Disney, Jhonson,
-Syncro+, ChemX, Yala). Agregado a la seccion Harness/Claude Code y al
-frente de la fila de capacidades Web del matriz.
-
-Co-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>
