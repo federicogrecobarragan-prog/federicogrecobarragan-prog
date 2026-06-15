@@ -159,6 +159,8 @@ user:federicogrecobarragan-prog topic:harness
 | [inspector](https://github.com/federicogrecobarragan-prog/inspector) | Herramienta de testing visual para servidores MCP. |
 | [playwright](https://github.com/federicogrecobarragan-prog/playwright) | Framework de testing y automatización web (Chromium, Firefox, WebKit). |
 
+**Recursos para descubrir MCPs** — consultar ANTES de automatizar/configurar a mano (¿existe un MCP para delegárselo a un agente?): [mcpservers.org](https://mcpservers.org/) · [composio.dev](https://composio.dev/) · [pulsemcp.com](https://www.pulsemcp.com/).
+
 ### Infraestructura de IA — [`topic:ai-infra`](https://github.com/search?q=user%3Afedericogrecobarragan-prog+topic%3Aai-infra&type=repositories)
 
 | Repo | Descripción |
