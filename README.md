@@ -34,6 +34,82 @@ user:federicogrecobarragan-prog topic:harness
 
 ---
 
+---
+
+## 🧠 Las 4D en el ecosistema agéntico
+
+El harness de La Colmena opera sobre el **AI Fluency Framework de Anthropic** (Rick Dakan & Joseph Feller): cuatro competencias que convierten el uso casual de IA en ingeniería de sistemas.
+
+| D | Competencia | Cómo vive en el harness |
+|---|---|---|
+| **Delegation** | ¿Qué le delego al agente? ¿Qué queda en juicio humano? | Volumen + repetición → agente. Estrategia, ética y criterio → humano. El COMMAND CENTER define los límites de cada rol. |
+| **Description** | Describir el objetivo con precisión que genera output útil, no plausible. | Specs EARS antes de codear. Output anchors en el system prompt. Anti-narración: el agente produce, no explica. |
+| **Discernment** | Evaluar críticamente el output: errores, sesgo, off-brief. | Gate del Reviewer (`cc-sdd`): único que cierra tareas. Pre-fetch verificado: la IA sintetiza datos reales, nunca inventa. Si no hay dato, dice `«sin dato»`. |
+| **Diligence** | Responsabilizarte de lo que hacés con la IA y cómo. | R0-R12: 13 reglas vinculantes. Auditoría Jhonson cada 15 min. Dead-letter queue. Vaultwarden para secretos. |
+
+> **Por qué importa:** un sistema donde el operador mantiene control real (Delegation + Diligence) mientras la IA maximiza throughput (Description + Discernment). No es ChatGPT; es ingeniería de agentes.
+
+---
+
+## 🔐 Seguridad: Reglas R0–R12 (13 reglas vinculantes)
+
+Aplicables a todo proyecto del ecosistema. Stack: [`claude-code-safety-hooks`](https://github.com/federicogrecobarragan-prog/claude-code-safety-hooks) · [`nuclei`](https://github.com/federicogrecobarragan-prog/nuclei) · [`npq`](https://github.com/federicogrecobarragan-prog/npq) · [`infra-deploy`](https://github.com/federicogrecobarragan-prog/infra-deploy) · [`vw_web_builds`](https://github.com/federicogrecobarragan-prog/vw_web_builds).
+
+| # | Regla |
+|---|---|
+| R0 | Secretos nunca en código, logs ni pantallas. Solo en Vaultwarden cifrada. |
+| R1 | `SUPABASE_SERVICE_KEY` solo en scripts locales del VPS — nunca en Docker expose ni en logs. |
+| R2 | RLS activo en **todas** las tablas de Supabase. Cada dato solo lo ve quien debe verlo. |
+| R3 | Anti-inyección: ningún input externo va a SQL/shell sin sanitizar. |
+| R4 | Webhooks firmados con HMAC. Sin firma válida = rechazado automático. |
+| R5 | Rate-limiting en todos los endpoints públicos. |
+| R6 | Operaciones destructivas requieren confirmación humana explícita. Gate obligatorio. |
+| R7 | Supply-chain: `npq` audita paquetes npm antes del install. No hay paquete nuevo sin auditoría. |
+| R8 | Escaneo de vulnerabilidades con `nuclei` antes de cada deploy. |
+| R9 | Backup cifrado GPG AES256 (`openclaw-backup-madre`). Passphrase solo en la bóveda. |
+| R10 | Notas del vault: secretos marcados `[REDACTADO — ver Vaultwarden]`. Nunca texto plano. |
+| R11 | Apps mobile: `FLAG_SECURE` + blur en app-switcher + clipboard auto-clear (ver `la-boveda`). |
+| R12 | Deploys hardened: Traefik + Vaultwarden, secretos vía `.env` no versionado (`infra-deploy`). |
+
+---
+
+## 🏗️ El Arnés: 9 pilares de ingeniería de agentes
+
+El harness hace al modelo **intercambiable** y al sistema **robusto**. Cambia el LLM debajo; el sistema sigue funcionando.
+
+| Pilar | Descripción | Repo / Patrón |
+|---|---|---|
+| **Pre-fetch pattern** | Un script junta datos reales ANTES de llamar al modelo. La IA sintetiza; nunca inventa. | Cualquier agente de producción |
+| **Output anchors** | El tipo de salida está declarado en el system prompt. Sin sorpresas de formato. | `cc-sdd`, system prompts |
+| **Anti-narración** | El agente produce output directo. No explica lo que hace. ~65% menos tokens. | `caveman` |
+| **Anti-alucinación** | Si no hay dato, dice `«sin dato»`. Confianza falsa = bug de producción. | Gate del Reviewer |
+| **Auditoría Jhonson** | Un agente vigila a todos los demás cada 15 minutos. SLA en producción. | `la-colmena` |
+| **Dead-letter queue** | Mensajes sin procesar no se pierden. Cola de reintentos con log. | `la-colmena` |
+| **SessionStart hook** | Al iniciar: lee contexto, carga memoria, ejecuta pre-flight checks. | `claude-code-safety-hooks` |
+| **Estado en disco** | El sistema sobrevive reinicios. Estado externalizado a Supabase, nunca solo en RAM. | `la-colmena`, `engram` |
+| **Memoria semántica** | Engram + vault: el agente recuerda entre sesiones. No empieza de cero. | `engram`, `vault-colmena` |
+
+---
+
+## 📋 SDD/LTR: Spec-Driven Development + Code Review
+
+Antes de código, existe el spec. Roles separados garantizan calidad sin revisión arbitraria.
+
+```
+Leader      → diseña el spec (EARS) y define criterios de aceptación
+Implementer → ejecuta contra el spec, sin tomar decisiones de diseño
+Reviewer    → ÚNICO que puede cerrar la tarea (gate de calidad)
+```
+
+**Doble loop (pskoett):**
+- **Inner loop:** verify-gate + self-healing + context-surfing — recupera fallas durante la sesión.
+- **Outer loop:** learning-aggregator + harness-updater + eval-creator — cierra brechas entre sesiones.
+
+**Handoff multi-modelo:** modelo económico (DeepSeek V3.2) produce volumen; modelo premium (Sonnet 4.6) revisa criterio. El Reviewer es siempre el tier superior.
+
+Repos: [`cc-sdd`](https://github.com/federicogrecobarragan-prog/cc-sdd) · [`agent-teams-lite`](https://github.com/federicogrecobarragan-prog/agent-teams-lite) · [`gentleman-guardian-angel`](https://github.com/federicogrecobarragan-prog/gentleman-guardian-angel) · [`pskoett-ai-skills`](https://github.com/federicogrecobarragan-prog/pskoett-ai-skills).
+
+
 ## Proyectos propios
 
 > 🔒 = repo **privado**: el nombre es visible, pero el contenido es de acceso restringido (solo el owner).
