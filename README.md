@@ -116,6 +116,7 @@ Repos: [`cc-sdd`](https://github.com/federicogrecobarragan-prog/cc-sdd) · [`age
 
 | Repo | Descripción |
 |---|---|
+| 🔒 [metrik](https://github.com/federicogrecobarragan-prog/metrik) | Metrik — panel de marketing contenedorizado (Docker: postgres+postgrest+Node cero-deps). Mide campañas/funnel/ads/email/redes multi-tenant. Producto VibeMarketing OdJ. |
 | 🔒 [scraper-precios-competencia](https://github.com/federicogrecobarragan-prog/scraper-precios-competencia) | (sin descripción) |
 | 🔒 [suite-precios](https://github.com/federicogrecobarragan-prog/suite-precios) | **Suite de Inteligencia de Precios** — CompetitorBot (B2B) + PriceGhost (B2C) sobre **un motor**, backend de monitoreo de precios/competencia. Motor de scraping multi-método + **votación de precio** (JSON-LD / site-specific / CSS / IA-fallback, con confidence y desambiguación de tachados→`posible_descuento`), **API async** (POST 202 + Supabase Realtime), Supabase **16+ tablas con RLS multitenant** (CMP-05 aislamiento cross-tenant **validado en vivo**), Edge Function `llm-proxy` (OpenRouter/Haiku, **probada en vivo**), scheduler por-producto. SDD 262 req EARS · 169 tests · smoke 10/10 contra DB real. Diseño 3 superficies por Claude Design (web B2B + companion mobile + B2C mobile) en `handoff/`. Stack Node/TS + Puppeteer-stealth/Scrapling. Deploy VPS dockerizado aislado (handoff BAKUGO pendiente). Familia OdJ. |
 | 🔒 [colmena-kit](https://github.com/federicogrecobarragan-prog/colmena-kit) | Colmena Kit — equipo de agentes IA gestionado para PyMEs (productización de La Colmena) |
