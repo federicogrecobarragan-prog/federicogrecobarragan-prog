@@ -109,6 +109,43 @@ Reviewer    → ÚNICO que puede cerrar la tarea (gate de calidad)
 
 Repos: [`cc-sdd`](https://github.com/federicogrecobarragan-prog/cc-sdd) · [`agent-teams-lite`](https://github.com/federicogrecobarragan-prog/agent-teams-lite) · [`gentleman-guardian-angel`](https://github.com/federicogrecobarragan-prog/gentleman-guardian-angel) · [`pskoett-ai-skills`](https://github.com/federicogrecobarragan-prog/pskoett-ai-skills).
 
+---
+
+## 🧭 Estándar de Desarrollo de 7 Etapas
+
+> **Estándar universal para TODO desarrollo nuevo del ecosistema.** Toda skill de deployment/build/ejecución debe embeber este checklist. Ninguna etapa avanza sin pasar su gate.
+
+| # | Etapa | Qué exige | Vive en |
+|---|-------|-----------|---------|
+| 1 | **DEFINE** | Definición del problema + plan acordado con el orquestador ANTES de tocar código. | `arrancar-proyecto` (skill) |
+| 2 | **SPECIFY (SDD)** | Spec formal de caso de uso: composición del equipo, nº de agentes, tipos de especialización, contratos I/O e inter-agente. | `cc-sdd`, `metodologia-sdd-ltr` |
+| 3 | **PLAN AT SCALE** | Arquitectura escalable desde el día 1. Sin atajos que bloqueen el crecimiento. Cada componente reemplazable de forma independiente. | Diseño dockerizado aislado (suite-precios/life-hub) |
+| 4 | **BUILD IN STAGES** | Desarrollo incremental con QA automatizada + code review en cada stage gate. Nada avanza sin pasar el test de etapa. | `tasks.json` (pending→review-pending→done) + Reviewer gate |
+| 5 | **TEST & VERIFY** | Suite automatizada: uso funcional, edge cases, estabilidad bajo carga, stress y benchmarks de escalabilidad. Resultados documentados. | REGLAS-DE-ORO Regla 13 (4 capas) + `gstack /qa` + `verify` |
+| 6 | **DEPLOY SAFE** | Checklist de validación completo + verificación de capa de seguridad antes de producción. Cero excepciones. | R0-R12 + `nuclei` pre-deploy + `deploy-playstore` |
+| 7 | **OPERATE & IMPROVE** | Monitoreo post-launch + ciclos de evaluación programados. Backlog alimentado por uso real. | Self-improving loop + Auditoría Jhonson (15 min) + `patterns.md` |
+
+**Embebido en:** `arrancar-proyecto`, `montar-web`, `deploy-playstore`, `team-setup`. Doc canónico: `estandar-7-etapas` (vault `10-ecosistema`).
+
+---
+
+## 🌙 Dreams System — goal-tracking de largo plazo *(en diseño)*
+
+> Capa de seguimiento de **metas de largo plazo / north-stars** de los agentes, persistente a través de sesiones. **NO confundir con `GR00T-Dreams`** (ese es DreamGen de Nvidia, generación de datos de robótica vía world models — referencia ML, no goal-tracking).
+
+**Problema que resuelve:** hoy `/dame` persigue **una** meta verificable por run (efímero), y `dream-review` del Command Center es solo un cron-reporte. No existía una capa que persiga aspiraciones/objetivos de horizonte largo a través del tiempo.
+
+**Arquitectura (reusa lo que ya existe):**
+- **`dreams` (tabla Supabase)** — north-star, KPIs, deadline, agente-owner, status, progreso % · pilar *Estado en disco*.
+- **`engram`** — persistencia semántica del contexto del dream entre sesiones.
+- **`/dame`** — motor de loop ya existente: cada dream se descompone en sub-metas verificables que corren como runs DAME.
+- **`dream-review` (cron semanal)** — consolida progreso, re-prioriza, alerta desvíos.
+- **skill `dream`** — análoga a `dame` pero con horizonte multi-sesión/multi-run y revisión periódica.
+- **Dashboard** — vista de progreso en `command-center` / Latido.
+
+Doc de diseño: `dreams-system-design` (vault `00-inbox`). Estado: **diseño** → build pendiente.
+
+---
 
 ## Proyectos propios
 
@@ -117,11 +154,11 @@ Repos: [`cc-sdd`](https://github.com/federicogrecobarragan-prog/cc-sdd) · [`age
 | Repo | Descripción |
 |---|---|
 | 🔒 [metrik](https://github.com/federicogrecobarragan-prog/metrik) | Metrik — panel de marketing contenedorizado (Docker: postgres+postgrest+Node cero-deps). Mide campañas/funnel/ads/email/redes multi-tenant. Producto VibeMarketing OdJ. |
-| 🔒 [scraper-precios-competencia](https://github.com/federicogrecobarragan-prog/scraper-precios-competencia) | (sin descripción) |
+| 🔒 [scraper-precios-competencia](https://github.com/federicogrecobarragan-prog/scraper-precios-competencia) | **Scraper de precios de competencia** (motor BLACK CODE, Python + Playwright headless) para Vinoteca/Segunda Copa: scrapea precios y alimenta el pipeline de publicación IG/FB vía n8n. Pieza de scraping del legacy IMPERIO DIGITAL. |
 | 🔒 [suite-precios](https://github.com/federicogrecobarragan-prog/suite-precios) | **Suite de Inteligencia de Precios** — CompetitorBot (B2B) + PriceGhost (B2C) sobre **un motor**, backend de monitoreo de precios/competencia. Motor de scraping multi-método + **votación de precio** (JSON-LD / site-specific / CSS / IA-fallback, con confidence y desambiguación de tachados→`posible_descuento`), **API async** (POST 202 + Supabase Realtime), Supabase **16+ tablas con RLS multitenant** (CMP-05 aislamiento cross-tenant **validado en vivo**), Edge Function `llm-proxy` (OpenRouter/Haiku, **probada en vivo**), scheduler por-producto. SDD 262 req EARS · 169 tests · smoke 10/10 contra DB real. Diseño 3 superficies por Claude Design (web B2B + companion mobile + B2C mobile) en `handoff/`. Stack Node/TS + Puppeteer-stealth/Scrapling. Deploy VPS dockerizado aislado (handoff BAKUGO pendiente). Familia OdJ. |
 | 🔒 [colmena-kit](https://github.com/federicogrecobarragan-prog/colmena-kit) | Colmena Kit — equipo de agentes IA gestionado para PyMEs (productización de La Colmena) |
 | 🔒 [cda-os](https://github.com/federicogrecobarragan-prog/cda-os) | **CDA-OS** — sistema operativo multiagente enterprise (CORE) que orquesta todo el entorno: ejecutivos C-Level, agentes especializados, workflows y bitácora de proyectos/skills. |
-| 🔒 [la-colmena](https://github.com/federicogrecobarragan-prog/la-colmena) | **La Colmena** — ecosistema multiagente en producción sobre OpenClaw (12 agentes, Supabase fuente de verdad, scheduler cron, 8 pilares del harness). Incluye **COMMAND CENTER** (cockpit.oficinadejhonson.com — panel único del ecosistema, `cockpit/` + collector) y motor VibeMarketing (leadgen Places 2 segmentos/día + Instantly). Export scrubbeado scripts+docs+harness. |
+| 🔒 [la-colmena](https://github.com/federicogrecobarragan-prog/la-colmena) | **La Colmena** — ecosistema multiagente en producción sobre OpenClaw (12 agentes, Supabase fuente de verdad, scheduler cron, 9 pilares del harness). Incluye **COMMAND CENTER** (cockpit.oficinadejhonson.com — panel único del ecosistema, `cockpit/` + collector) y motor VibeMarketing (leadgen Places 2 segmentos/día + Instantly). Export scrubbeado scripts+docs+harness. |
 | 🔒 [openclaw-to-hermes-migration](https://github.com/federicogrecobarragan-prog/openclaw-to-hermes-migration) | **Migración OpenClaw → Hermes** (feature #15) — del ecosistema La Colmena (11 agentes + crons) al arnés Hermes. SDD completo (EARS R1-R18 + design §1-10) + helper `hermes_migrate_agent.py` (setup/port-cron/tick-lines) + `cutover_discord.sh`. Auto-fire híbrido (gateway always-on + system-cron tick por profile) + tick selectivo para split-migration. KIRA graduada + 7 crons internos en Hermes; dev-pipeline + cutover client-facing pendientes. Sin big-bang, todo reversible. |
 | 🔒 [hermes-platform](https://github.com/federicogrecobarragan-prog/hermes-platform) | **Hermes Platform** — gestión de la plataforma Hermes Agent (Nous Research) en todas nuestras implementaciones (La Colmena + OdJ/VibeMarketing + productos = 1 install, N profiles). Monitor recurrente (`hermes_update_check.py`, cron lunes): valida vs el upstream oficial — versión core (commits behind), skills hub (updates), inventario de skills/profiles. Doctrina de update (gateado, backup, rollback) + skills-management + deployments. Status auto-pusheado + alertas Telegram. |
 | 🔒 [genesis](https://github.com/federicogrecobarragan-prog/genesis) | **GÉNESIS** — producto enlatado: agente IA premium auto-capacitado sobre Hermes. Install rápido (PC/VPS/servidor) + knowledge-pack curado + onboarding agéntico (nombrar agente → entrevista objetivos → auto-capacitación → operar real-time) + mission-packs. 1er caso de éxito: CDA → desplegar SONAR (recluta-os). Reusa hermes-platform/installer + patrones colmena-kit + skill desplegar-producto-vps. Frontend por Claude Design (One-Shot). Familia OdJ. |
@@ -150,6 +187,7 @@ Repos: [`cc-sdd`](https://github.com/federicogrecobarragan-prog/cc-sdd) · [`age
 | 🔒 [Syncro-WEB](https://github.com/federicogrecobarragan-prog/Syncro-WEB) | **Syncro+** — sitio de plataforma de IA empresarial. HTML estático (HandOff de diseño). Deploy en Vercel ([syncro-plus.vercel.app](https://syncro-plus.vercel.app)). |
 | 🔒 [lightingyoga-web](https://github.com/federicogrecobarragan-prog/lightingyoga-web) | **LightingYoga** — diseño web para un estudio de yoga (programa Raíz / MSC Mindfulness). Material fuente del prototipo: HTML de referencia para cloning, briefs, meditaciones guiadas, videos e imágenes. Web final en construcción. |
 | 🔒 [decretando-disney-web](https://github.com/federicogrecobarragan-prog/decretando-disney-web) | **Decretando Disney** — web de **agentes de viaje** (Martín & Mica): Disney, Universal, cruceros y Caribe. SPA estática (React 18 por CDN + JSX/Babel en navegador, **sin build**): aurora canvas, **Mickey 3D** (model-viewer + GLB), 8 categorías, video-cards, **cursor guante de Mickey**, navegación con **History API** (el back de Android navega in-app, no cierra), **cache-busting + Error Boundary** (anti pantalla-blanca). **Fase 2 backend Supabase** (Edge Functions Deno, RLS, secretos en env): captura de **leads** (contacto/reserva/newsletter/blog) → aviso por email a los agentes vía **Brevo** + **panel comercial privado** (`#panel` + clave, fail-closed): funnel de ventas, prospectos calientes con follow-up 1-toque (WhatsApp/llamar/Gmail), KPIs, tendencia 14d, top destinos. **Blog-comunidad** (Supabase Auth: registro/login/comentarios/emojis), **newsletter** (Brevo) y **noticias automáticas** (cron Lun/Mié/Vie → OpenRouter + Google News RSS) + **editor de autoservicio en el panel** (el cliente carga/pausa/borra **promociones**, **temas de blog** y **noticias/novedades a mano**, **modera reseñas de pasajeros** y **sube imágenes** sin tocar código ni SQL — Edge Function `panel-write` fail-closed + imagen canvas→base64 en la fila, sin bucket de Storage). **Reseñas con moderación** (tabla `resenas`, RLS: anon lee aprobadas, inserta pendientes). **Newsletter automático** (Brevo): al crear una promo avisa a los suscriptores y la bienvenida incluye las 3 promos vigentes; noticias con pool de imágenes variado. Emails de la web abren **Gmail compose**. **En vivo:** [decretandodisney.com](https://decretandodisney.com) (Hostinger Premium, SSL), validado **360** (desktop/iPhone/Android, 0 errores/404/overflow). **Pipeline de assets local (reutilizable):** Mixamo → **Blender headless** (`fbx2glb.py`: FBX→GLB texturizado) + videos **ffmpeg 2-pass** comprimidos. |
+| [decretando-disney-preview](https://github.com/federicogrecobarragan-prog/decretando-disney-preview) | **Decretando Disney — preview** (público): repo de preview/staging de la SPA Decretando Disney (gemelo del repo de producción privado `decretando-disney-web`). React 18 por CDN sin build. |
 | 🔒 [Creaciones-de-im-genes-y-Post-para-redes](https://github.com/federicogrecobarragan-prog/Creaciones-de-im-genes-y-Post-para-redes) | Repositorio de assets del ecosistema: imágenes y posts para redes sociales (creativos y publicaciones). |
 | [CEFALU-Sistema-de-Gestion-ERP](https://github.com/federicogrecobarragan-prog/CEFALU-Sistema-de-Gestion-ERP) | Sistema de gestión (ERP) construido desde cero con Claude Code. |
 | [CV_FedericoGrecoBarragan.github.io](https://github.com/federicogrecobarragan-prog/CV_FedericoGrecoBarragan.github.io) | Sitio de CV / portfolio personal. |
@@ -184,6 +222,7 @@ Repos: [`cc-sdd`](https://github.com/federicogrecobarragan-prog/cc-sdd) · [`age
 | 🔒 [openclaw-safe-update](https://github.com/federicogrecobarragan-prog/openclaw-safe-update) | Updater seguro del binario OpenClaw: backup + age gate supply-chain + reinstala plugins críticos + verifica canales. Privado. |
 | [gentleman-guardian-angel](https://github.com/federicogrecobarragan-prog/gentleman-guardian-angel) | Code review con IA, agnóstico de proveedor (Claude, Gemini, Codex, Ollama). |
 | 🔒 [skills-main](https://github.com/federicogrecobarragan-prog/skills-main) | Gestor del ecosistema de skills y agentes (privado). |
+| 🔒 [skills-propias](https://github.com/federicogrecobarragan-prog/skills-propias) | Skills propias de Federico para Claude Code (autoría local). Primera: `registrar-avance` (bitácora Obsidian + grafo Graphiti). Privado. |
 | 🔒 [ejemplo-harness](https://github.com/federicogrecobarragan-prog/ejemplo-harness) | Ejemplo de referencia de harness con subagentes (privado). |
 
 ### Diseño · UI — [`topic:design`](https://github.com/search?q=user%3Afedericogrecobarragan-prog+topic%3Adesign&type=repositories)
@@ -224,6 +263,7 @@ Repos: [`cc-sdd`](https://github.com/federicogrecobarragan-prog/cc-sdd) · [`age
 | [Webwright](https://github.com/federicogrecobarragan-prog/Webwright) | Framework de agente-navegador para tareas web de horizonte largo. |
 | [yt-dlp](https://github.com/federicogrecobarragan-prog/yt-dlp) | Descargador CLI de audio/video con mil opciones. Uso en La Colmena: ingesta de media → Whisper (transcripción), captura de contenido para Mora/análisis y assets Vinoteca/IG. |
 | [obsidian-clipper](https://github.com/federicogrecobarragan-prog/obsidian-clipper) | Fork oficial: Web Clipper de Obsidian — captura/resalta páginas web → Markdown durable (templates, variables, filtros). Chrome/Firefox/Safari/Edge. |
+| [PriceGhostScarappper](https://github.com/federicogrecobarragan-prog/PriceGhostScarappper) | App self-hosted de tracking de precios de productos desde cualquier web. Referencia/insumo para la suite de precios (`suite-precios` / PriceGhost B2C). |
 | [obsidian-api](https://github.com/federicogrecobarragan-prog/obsidian-api) | Fork oficial: type definitions TS de la API de Obsidian para desarrollar plugins. |
 | [obsidian-releases](https://github.com/federicogrecobarragan-prog/obsidian-releases) | Fork oficial: catálogo de community plugins + themes + releases de Obsidian. |
 
@@ -277,3 +317,4 @@ Repos: [`cc-sdd`](https://github.com/federicogrecobarragan-prog/cc-sdd) · [`age
 | [vw_web_builds](https://github.com/federicogrecobarragan-prog/vw_web_builds) | [`self-hosting`](https://github.com/search?q=user%3Afedericogrecobarragan-prog+topic%3Aself-hosting&type=repositories) | Fork de Bitwarden para compilar solo el web-vault de Vaultwarden. |
 | 🔒 [infra-deploy](https://github.com/federicogrecobarragan-prog/infra-deploy) | [`self-hosting`](https://github.com/search?q=user%3Afedericogrecobarragan-prog+topic%3Aself-hosting&type=repositories) | Configs de deploy scrubbeadas (solo compose) de infra self-hosted de La Colmena: Vaultwarden (LA BÓVEDA) + Traefik. Secretos vía `.env` no versionado. |
 | [analytics](https://github.com/federicogrecobarragan-prog/analytics) | [`self-hosting`](https://github.com/search?q=user%3Afedericogrecobarragan-prog+topic%3Aself-hosting&type=repositories) | **Plausible** — analytics web self-hosted, privacy-first, sin cookies (alternativa a GA). Uso en La Colmena: medición de oficinadejhonson.com + conversión de funnels (AgendaBot/FacturaBot/ReseñaBot) y landings. |
+| [twentyCRM](https://github.com/federicogrecobarragan-prog/twentyCRM) | [`crm`](https://github.com/search?q=user%3Afedericogrecobarragan-prog+topic%3Acrm&type=repositories) | Fork de **Twenty** — alternativa open-source a Salesforce diseñada para IA. Referencia/evaluación CRM frente a `crm-colmena` (decisión pendiente: reemplazar o quedar solo como referencia). |
