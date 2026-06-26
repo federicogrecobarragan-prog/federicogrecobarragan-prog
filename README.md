@@ -53,6 +53,8 @@ El harness de La Colmena opera sobre el **AI Fluency Framework de Anthropic** (R
 
 ## 🔐 Seguridad: Reglas R0–R12 (13 reglas vinculantes)
 
+> **Namespace:** estas **R0-R12** son los **controles de seguridad de producto**. La higiene de **credenciales/secretos** (Vaultwarden, rotación de tokens, scope validation) es un marco separado: **K0-K12** (vault `seguridad-r0-r12`). No confundir.
+
 Aplicables a todo proyecto del ecosistema. Stack: [`claude-code-safety-hooks`](https://github.com/federicogrecobarragan-prog/claude-code-safety-hooks) · [`nuclei`](https://github.com/federicogrecobarragan-prog/nuclei) · [`npq`](https://github.com/federicogrecobarragan-prog/npq) · [`infra-deploy`](https://github.com/federicogrecobarragan-prog/infra-deploy) · [`vw_web_builds`](https://github.com/federicogrecobarragan-prog/vw_web_builds).
 
 | # | Regla |
