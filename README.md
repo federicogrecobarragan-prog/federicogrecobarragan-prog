@@ -155,6 +155,7 @@ Repo: 🔒 [`dreams-system`](https://github.com/federicogrecobarragan-prog/dream
 
 | Repo | Descripción |
 |---|---|
+| 🔒 [competitorbot-web](https://github.com/federicogrecobarragan-prog/competitorbot-web) | (sin descripción) |
 | 🔒 [stealth-stack](https://github.com/federicogrecobarragan-prog/stealth-stack) | **Stealth-Stack** — acceso agéntico por navegador multi-cuenta (login + acciones) evadiendo detección anti-bot. Fingerprint único 1:1 + **IP residencial 1:1 por cuenta** + comportamiento humano (ghost-cursor/typing) + warm-up progresivo por etapas + observabilidad (langfuse) + credenciales en infisical self-hosted. Sesiones aisladas (storage_state/user_data_dir por cuenta), suite anti-detección (sannysoft/fingerprint/browserleaks/creepjs/amiunique). Nace para destrabar el DOM degradado que LinkedIn sirve a la automatización con IP compartida. Deploy Docker en VPS (`/docker/scrapers`), fuera del MAIN. F0 scaffold; F1-F7 gateadas por GO + proxies/captcha. |
 | 🔒 [metrik](https://github.com/federicogrecobarragan-prog/metrik) | Metrik — panel de marketing contenedorizado (Docker: postgres+postgrest+Node cero-deps). Mide campañas/funnel/ads/email/redes multi-tenant. Producto VibeMarketing OdJ. |
 | 🔒 [scraper-precios-competencia](https://github.com/federicogrecobarragan-prog/scraper-precios-competencia) | **Scraper de precios de competencia** (motor BLACK CODE, Python + Playwright headless) para Vinoteca/Segunda Copa: scrapea precios y alimenta el pipeline de publicación IG/FB vía n8n. Pieza de scraping del legacy IMPERIO DIGITAL. |
