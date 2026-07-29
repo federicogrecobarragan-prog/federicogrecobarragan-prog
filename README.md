@@ -163,7 +163,6 @@ Repo: 🔒 [`dreams-system`](https://github.com/federicogrecobarragan-prog/dream
 
 | Repo | Descripción |
 |---|---|
-| 🔒 [ingresos-agent](https://github.com/federicogrecobarragan-prog/ingresos-agent) | (sin descripción) |
 | 🔒 [terranova-raiz](https://github.com/federicogrecobarragan-prog/terranova-raiz) | **Terranova · Proyecto RAÍZ** — sistema comercial inmobiliario (Oficina de Jhonson): agente WhatsApp qualifier + frontend comercial + round-robin zonal + middleware Supabase. Reusa life-hub/ATRIA + nexo + crm-colmena. CRM propio 5 módulos, propuesta enviada al socio. |
 | 🔒 [colmena-rutinas](https://github.com/federicogrecobarragan-prog/colmena-rutinas) | **Colmena Rutinas** — rutinas, automatizaciones y mantenimiento preventivo del ecosistema (catálogo v2: 20 rutinas / 7 frentes / 3 capas por costo): contrato de rutina + run-ledger + watchdog. PC (MIDORIA) + VPS (BAKUGO). |
 | 🔒 [radar-tendencias](https://github.com/federicogrecobarragan-prog/radar-tendencias) | **Radar de Tendencias** — vigilancia de mercado agéntico (herramientas/modelos/funciones) con doctrina de adopción gateada: scan $0 semanal + filtro brain + digest mensual, máx 1-2 adopciones/mes. |
@@ -222,6 +221,21 @@ Repo: 🔒 [`dreams-system`](https://github.com/federicogrecobarragan-prog/dream
 | 🔒 [cefalu-suite](https://github.com/federicogrecobarragan-prog/cefalu-suite) | **CEFALU Suite** — MVP de **conciliación bancaria automatizada** (Next.js 15 + Supabase + n8n + agente IA). Producto Oficina de Jhonson. **No confundir** con [`CEFALU-Sistema-de-Gestion-ERP`](https://github.com/federicogrecobarragan-prog/CEFALU-Sistema-de-Gestion-ERP) (ese es un ERP genérico distinto). Patrón reutilizable: **backoffice financiero con conciliación asistida por IA**. |
 | 🔒 [sonar-cda](https://github.com/federicogrecobarragan-prog/sonar-cda) | **SONAR (CDA)** — instancia desplegada del ATS de sourcing [`recluta-os`](https://github.com/federicogrecobarragan-prog/recluta-os) para el cliente CDA, instalada vía **Hermes** sobre el stack de [`genesis`](https://github.com/federicogrecobarragan-prog/genesis). **1er caso de éxito real del producto Génesis** (agente enlatado → cliente). Familia OdJ (cliente). |
 | 🔒 [cda-os-architecture](https://github.com/federicogrecobarragan-prog/cda-os-architecture) | **CDA-OS Architecture** — referencia de arquitectura **pública/sanitizada** del OS multiagente enterprise [`cda-os`](https://github.com/federicogrecobarragan-prog/cda-os): documenta el diseño (C-Level, agentes, workflows) sin credenciales ni datos. Gemelo-vitrina para portfolio/GEO. |
+
+---
+
+## 💰 Ingreso personal de Federico (proyectos privados)
+
+> Proyectos **personales de Federico Greco Barragán** orientados a generar **ingreso propio**.
+> Frontera explícita: **no** son de CDA (su empleo como KAM) ni de Oficina de Jhonson (la marca
+> y la agencia). Alcance, capital, riesgo y beneficio son personales. Se listan acá para que
+> ningún agente del ecosistema los confunda con trabajo de cliente ni les aplique la doctrina
+> comercial de OdJ.
+
+| Repo | Descripción |
+|---|---|
+| 🔒 [ingresos-agent](https://github.com/federicogrecobarragan-prog/ingresos-agent) | **Agente Autónomo de Ingresos** — motor de decisión auditable con dos vías de ingreso (Track A: mercado · Track B: trabajo cobrable) y **un solo KPI: el sistema paga su propio costo**. Se eligió supervivencia operativa y no alpha porque distinguir un edge real del ruido requiere ~28 años con volatilidad cripto. Motor de políticas `allow`/`quarantine`/`deny` en código (portado en forma de [automaton](https://github.com/Conway-Research/automaton), MIT), ledger append-only por triggers, position sizing calculado por el motor y nunca por el LLM, constitución verificada por hash. Base: auditoría de seguridad de 8 repos financieros. Docker aislado del MAIN. Spec SDD feature #25 (EARS R1–R28). F0 en curso, 60 tests. |
+| [cashclaw](https://github.com/federicogrecobarragan-prog/cashclaw) | Agente autónomo que toma trabajo, lo hace, cobra y mejora. Territorio conceptual del **Track B** de `ingresos-agent` — evaluar fusión o reuso antes de duplicar. |
 
 ---
 
