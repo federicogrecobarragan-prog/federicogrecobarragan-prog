@@ -163,6 +163,7 @@ Repo: 🔒 [`dreams-system`](https://github.com/federicogrecobarragan-prog/dream
 
 | Repo | Descripción |
 |---|---|
+| 🔒 [ingresos-agent](https://github.com/federicogrecobarragan-prog/ingresos-agent) | (sin descripción) |
 | 🔒 [terranova-raiz](https://github.com/federicogrecobarragan-prog/terranova-raiz) | **Terranova · Proyecto RAÍZ** — sistema comercial inmobiliario (Oficina de Jhonson): agente WhatsApp qualifier + frontend comercial + round-robin zonal + middleware Supabase. Reusa life-hub/ATRIA + nexo + crm-colmena. CRM propio 5 módulos, propuesta enviada al socio. |
 | 🔒 [colmena-rutinas](https://github.com/federicogrecobarragan-prog/colmena-rutinas) | **Colmena Rutinas** — rutinas, automatizaciones y mantenimiento preventivo del ecosistema (catálogo v2: 20 rutinas / 7 frentes / 3 capas por costo): contrato de rutina + run-ledger + watchdog. PC (MIDORIA) + VPS (BAKUGO). |
 | 🔒 [radar-tendencias](https://github.com/federicogrecobarragan-prog/radar-tendencias) | **Radar de Tendencias** — vigilancia de mercado agéntico (herramientas/modelos/funciones) con doctrina de adopción gateada: scan $0 semanal + filtro brain + digest mensual, máx 1-2 adopciones/mes. |
