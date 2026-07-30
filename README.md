@@ -244,6 +244,19 @@ Repo: 🔒 [`dreams-system`](https://github.com/federicogrecobarragan-prog/dream
 
 ---
 
+## 🏠 Vida personal de Federico (proyectos privados)
+
+> Agentes que trabajan para la **vida diaria** de Federico: rutina, deportes, viajes, temas
+> de casa. Misma frontera que la sección de ingresos: **no** son de CDA ni de Oficina de
+> Jhonson, y tampoco buscan generar plata. Ningún agente del ecosistema debe aplicarles
+> doctrina comercial ni tratarlos como trabajo de cliente.
+
+| Repo | Descripción |
+|---|---|
+| 🔒 [vida](https://github.com/federicogrecobarragan-prog/vida) | **VIDA** — agente personal de vida diaria (rutina, deportes, viajes) en Docker aislado, loop 24/7, alertas a Telegram. Módulo activo: **watcher de tarifas aéreas** vía `fast-flights` (endpoint protobuf de Google Flights, **sin API key, costo cero**) con link directo de compra. Cotiza round-trip **y** 2 one-way combinados, lo que habilita **open-jaw** (entrar por un aeropuerto, salir por otro) con 20 requests HTTP para ~240 combinaciones. Tres aprendizajes portables: (1) clasificar en *llega a tiempo sí/no* miente — el vuelo que aterriza el día antes gana el día completo pero paga una noche de hotel, y en el primer caso real el ganador vivía justo en ese bucket oculto; (2) el traslado aeropuerto↔destino se paga en los **dos** sentidos, si no Miami parece más barato que Orlando y no lo es; (3) en protobuf **hora `None` es medianoche, no dato faltante** — tratarla como ausente descarta los vuelos nocturnos, los únicos que llegan a la mañana. Patrón reutilizable: **watcher de precios con buckets de decisión, no con un único "mejor precio"**. |
+
+---
+
 ## Stack por categoría
 
 ### Harness · Agentes · Claude Code — [`topic:harness`](https://github.com/search?q=user%3Afedericogrecobarragan-prog+topic%3Aharness&type=repositories)
