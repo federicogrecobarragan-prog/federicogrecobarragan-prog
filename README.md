@@ -162,7 +162,9 @@ Repo: 🔒 [`dreams-system`](https://github.com/federicogrecobarragan-prog/dream
 
 **Migración 0003 — STAGED** (fix de dos defectos del guard de 0002, ambos comprobados contra producción): **(A) el gate no cubría INSERT** — el criterio de aceptación de T4 decía "BEFORE UPDATE", pero R19 dice *escribir*, y escribir incluye INSERT; un `POST /rest/v1/dreams` con `status='achieved'` y `approved_by` NULL devolvía **HTTP 201**, creando un dream logrado sin gate (y es la vía por la que un restore reintroduce filas terminales sin auditoría). **(B) archivar era irreversible** — 0002 trataba `abandoned` como terminal, así que un dream archivado no se podía reabrir. Ahora solo `achieved` es terminal. Verificada en Postgres 17. Commit `d15d1f8`. **Pendientes:** apply de 0003 en el SQL editor + vista command-center (handoff BAKUGO).
 
-**Lección reutilizable:** cuando un requirement dice *escribir*, el criterio de aceptación no puede reducirlo a UPDATE — un gate `BEFORE UPDATE` deja el INSERT abierto. Aplica a cualquier gate HITL por trigger.
+**Capa de KPIs (R21) — implementada**: `progress_pct` mide *milestones*, no el north-star, así que un dream podía llegar a 100% con su KPI en cero (caso real: Hermes cerró al 100% de hitos con `agentes_migrados_pct` en 80/100). `dream_review` ahora lee los KPIs y exige **100% de hitos Y KPIs cumplidos Y con medición registrada** para señalizar candidato a cierre; distingue "KPI en target" de "KPI nunca medido" (un `current` congelado del seed no es evidencia). `scripts/record_kpi.py` registra mediciones reales (`current` + `measured_at` + `source`). Sin adapters a Stripe/Play Store a propósito: sin credenciales, una integración no probable es peor que ninguna. Verificado E2E contra la DB real.
+
+**Lecciones reutilizables:** (1) cuando un requirement dice *escribir*, el criterio de aceptación no puede reducirlo a UPDATE — un gate `BEFORE UPDATE` deja el INSERT abierto; (2) una métrica derivada de sub-tareas (hitos) **no** prueba el objetivo: el criterio de cierre tiene que mirar la métrica del objetivo, y distinguir "en target" de "nunca medido".
 
 ---
 
