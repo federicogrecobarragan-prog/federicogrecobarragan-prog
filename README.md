@@ -282,6 +282,7 @@ Repo: 🔒 [`dreams-system`](https://github.com/federicogrecobarragan-prog/dream
 
 | Repo | Descripción |
 |---|---|
+| 🔒 [claude-scheduled-tasks](https://github.com/federicogrecobarragan-prog/claude-scheduled-tasks) | **Definiciones (`SKILL.md`) de las tareas agendadas de Claude Code en la PC** — el prompt que cada rutina ejecuta, versionado. Vive en `~/.claude/scheduled-tasks`, que **es** el repo (sin copia ni deploy: no puede derivar). Complementa a `colmena-rutinas`, que guarda los *contratos* y los scripts; acá está lo que el scheduler corre. Sin secretos por diseño: el `.gitignore` bloquea `.env*`/`*.key`/`*_secret*` y las credenciales se leen en runtime. Alta 2026-08-16, tras encontrar que las 10 definiciones existían en una sola copia sin respaldo. |
 | [paperclip](https://github.com/federicogrecobarragan-prog/paperclip) | **Paperclip** (fork) — control-plane open-source para gestionar equipos de agentes IA. **Montado en local como control-plane de La Colmena v2.0** (24 agentes / 8 unidades, maker≠checker, guardrails run-cap + hard-block PAYG). Ops en `paperclip-colmena-ops`. |
 | [gstack](https://github.com/federicogrecobarragan-prog/gstack) | El setup de Claude Code de Garry Tan: 23 herramientas (CEO, diseñador, eng manager, QA, release). |
 | [cc-sdd](https://github.com/federicogrecobarragan-prog/cc-sdd) | Harness mínimo de Spec-Driven Development para Claude Code, Codex, Cursor y más. |
